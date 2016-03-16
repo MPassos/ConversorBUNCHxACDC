@@ -1,0 +1,35 @@
+LEIA-ME v1.2
+
+OBSERVAÇÕES:
+Este software apenas converte arquivos de input, output da ferramenta de extração BUNCH para ferramenta ACDC, bem como o MDG gerado pela ferramenta STAN4J
+Não utilize nenhum outro arquivo para realizar a conversão, pois os padrões não serão reconhecidos e existe o risco da corrupção do arquivo.
+
+Exemplo de Arquivo de INPUT do Bunch:
+NodeReader	Implies 
+NodeReader	Literal	 
+NodeReader	Not	 
+NodeReader	And	 
+NodeReader	Node 
+NodeReader	Or 
+NodeReader	Equals 
+NodeWriter	Implies 
+
+
+Exemplo de arquivo de OUTPUT do Bunch:
+SS(Node.ss) = NodeWriter, AtLeast, Choose, Node, Or, Not, Equals
+SS(And.ss) = SatSolver, Literal, AtMost, And, NodeReader, Implies
+
+Utilize apenas arquivos que se encontrem nestes formatos.
+
+Instruções:
+
+1. Escolha o arquivo que deseja converter, se estiver em dúvida quanto ao tipo de arquivo é aceito utilize o filtro "Arquivos de Input"
+2. Escolha o tipo de conversão que deseja fazer: conversão do input ou do output
+3. O arquivo convertido estará no diretório raiz com a nomenclatura no seguinte formato:
+	Arquivo de entrada: Prop4JFull
+	Arquivo convertido Input: Prop4JCI.rsf
+	Arquivo convertido Output: Prop4JCO.rsf
+	
+CONTATO:
+mpsc.comp@gmail.com
+
