@@ -147,7 +147,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try {
-            Conversor c = new Conversor(input, input.getName()+"CI.rsf");
+            Conversor c = new Conversor(input,"CI.rsf");
             c.converterA();
             JOptionPane.showMessageDialog(rootPane, "Sucesso!");
         } catch (IOException ex) {
@@ -162,7 +162,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
          try {
-            Conversor c = new Conversor(input, input.getName()+"CO.rsf");
+            Conversor c = new Conversor(input, "CO.rsf");
             c.converterB();
             JOptionPane.showMessageDialog(rootPane, "Sucesso!");
         } catch (IOException ex) {
